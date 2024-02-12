@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="myInput" maxlength="7">
+    <button onclick="Add()">Add</button>
+    <div id="display"></div>
+    <p id="load"></p>
+    <script>
+        let arr = []
+
+        function Add() {
+            if (myInput.value) {
+                let obj = {
+                    name: myInput.value
+                }
+                arr.push(obj)
+                load.hidden = false
+                displayed()
+                setUpMessages('successful', 'green')
+            } else if (!myInput.value) {
+                setUpMessages('pls enter valid input', 'red')
+                return
+            }
+            if (myInput.value > 7) {
+                alert()
+            }
+
+        }
+        function displayed() {
+            display.innerHTML = ''
+            arr.forEach(function (el, i) {
+                display.innerHTML += `
+                     <h1>${el.name}</h1>
+                    <button onclick="deletes(${i})">delete</button>
+                `
+
+            })
+
+            console.log(arr);
+        }
+        function deletes(i) {
+            arr.splice(i, 1)
+            displayed()
+
+        }
+        function setUpMessages(msg, color) {
+            load.innerHTML = msg
+            load.style.color = color
+        }
+        //  arr.forEach(function (el) {
+        //         display.innerHTML += `
+        //     <h1>${el.name}</h1>
+        //     <button onclick="deletes(${arr.indexOf(el)})">delete</button>
+        // `;
+        //     });
+    </script>
+</body>
+
+</html>

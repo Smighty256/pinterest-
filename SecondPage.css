@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    padding: 16px;
+    gap: 10px;
+}
+
+#pinterest_logo {
+    color: rgb(209, 4, 4);
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    display: flex;
+}
+
+#cancel {
+    padding: 12px 20px 12px 20px;
+    background-color: rgba(194, 189, 189, 0.274);
+    border: none;
+    border-radius: 25px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+#cancel:hover {
+    background-color: rgba(194, 189, 189, 0.541);
+}
+
+#dropdown-menu {
+    border: none;
+    box-shadow: rgb(0, 0, 0, 0.5) 1px 1px 5px 1px;
+    padding: 5px;
+}
+
+#dropdown-menu2 {
+    border: none;
+    box-shadow: rgb(0, 0, 0, 0.5) 1px 1px 5px 1px;
+    width: 20vw;
+}
+
+#dropdown-item:hover {
+    background-color: rgba(128, 128, 128, 0.384);
+    border-radius: 10px;
+}
+
+#dropdown-item2 {
+    width: 150px;
+}
+
+#dropdown-item2 {
+    width: 150px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+#dropdown-item2:hover {
+    text-decoration: underline;
+    background-color: white;
+}
+
+#dropdown-item22 {
+    width: 150px;
+    font-weight: 600;
+}
+
+#dropdown-item22:hover {
+    background-color: white;
+}
+
+#dropdown-icon {
+    margin-top: 20px;
+    color: black;
+}
+
+.exploreContainer {
+    display: none;
+}
+
+#searchButton {
+    border: none;
+    width: 100%;
+    border-radius: 25px;
+    background-color: white;
+}
+
+#inputButton {
+    border: none;
+    width: 100%;
+    background-color: rgba(194, 189, 189, 0.171);
+    padding: 12px 10px 12px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+#inputButton::placeholder {
+    color: rgba(0, 0, 0, 0.288);
+}
+
+#Account {
+    display: flex;
+    gap: 5px;
+}
+
+#logIn {
+    border: none;
+    width: 90px;
+    height: 50px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+#logIn:hover {
+    background-color: rgba(128, 128, 128, 0.253);
+}
+
+#signIn {
+    border: none;
+    width: 90px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgb(224, 22, 22);
+    color: white;
+    font-weight: 600;
+}
+
+#signIn:hover {
+    background-color: rgb(179, 20, 20);
+}
+
+#Food_Drinks {
+    margin: auto;
+    background-image: url('../images/food\ and\ drinks.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 90%;
+    border-radius: 20px 20px;
+    align-items: center;
+    text-align: center;
+}
+
+#exploreButton {
+    background-color: rgba(150, 150, 150, 0.685);
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+
+@media (max-width: 766px) {
+    #searchButton {
+        display: none;
+    }
+
+    #inputButton {
+        display: none;
+    }
+
+    #header {
+        justify-content: space-between;
+    }
+}
